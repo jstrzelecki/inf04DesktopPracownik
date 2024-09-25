@@ -1,0 +1,98 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="egz2306Poczta.MainWindow"
+        Title="Nadaj Przesyłkę PESEL"
+        Width="800"
+        Height="400"
+        CanResize="False"
+        WindowStartupLocation="CenterScreen"
+        Padding="30"
+        >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        
+       <Grid.RowDefinitions>
+           <RowDefinition Height="Auto"/>
+           <RowDefinition Height="Auto"/>
+       </Grid.RowDefinitions> 
+        
+        <!-- Rodzaj przesyłki -->
+        <StackPanel Margin="0,0,40,0">
+            
+            <Border BorderBrush="Gray" 
+                    BorderThickness="1" 
+                    Margin="10" Padding="5">
+                <StackPanel Margin="10,10,10,10">
+                    <TextBlock Text="Rodzaj przesyłki" FontWeight="Bold" 
+                               Margin="0,0,0,10"/>
+                    <RadioButton Content="Pocztówka" GroupName="ShipmentType"/>
+                    <RadioButton Content="List" GroupName="ShipmentType"/>
+                    <RadioButton Content="Paczka" GroupName="ShipmentType"/>
+                
+                </StackPanel>
+            </Border>
+        
+            <!-- Sprawdz Cenę -->
+            <StackPanel Grid.Row="1" Grid.Column="0" Margin="10,0,10,0" >
+                <StackPanel >
+                    <Button Content="Sprawdź Cenę" HorizontalAlignment="Stretch"
+                            HorizontalContentAlignment="Center" Padding="5"
+                            Background="LightBlue"
+                            /> 
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <Image Source="Assets/letter.png"
+                           Width="75" Height="75" HorizontalAlignment="Left" 
+                           Margin="0,15,10,10"
+                           />
+                    <TextBlock Text="Cena: 1,5 zł" HorizontalAlignment="Right"
+                               FontSize="16" FontWeight="Bold"/>
+
+                </StackPanel>
+           
+            </StackPanel>      
+            
+        
+        </StackPanel>
+        
+        
+
+       <!-- Dane Adresowe (prawa strona) -->
+        <Border Grid.Row="0" Grid.Column="1" BorderBrush="Gray" BorderThickness="1" 
+                Margin="10" Padding="5">
+            <StackPanel Margin="10">
+                <TextBlock Text="Dane Adresowe" FontWeight="Bold" Margin="0,0,0,10"/>
+                
+                <TextBlock Text="Ulica z numerem"  Margin="0,0,0,10"/>
+                <TextBox Watermark="Konopnickiej 98" Margin="0,0,0,10" />
+                
+                <TextBlock Text="Kod pocztowy" Margin="0,0,0,10" />
+                <TextBox Watermark="65124" Width="100" HorizontalAlignment="Left" 
+                         Margin="0,0,0,10" />
+                
+                <TextBlock Text="Miasto" Margin="0,0,0,10" />
+                <TextBox Watermark="Olsztyn" Margin="0,0,0,10" />
+            </StackPanel>
+            
+        
+       
+            
+        </Border>
+        
+        
+        <!-- Zatwierdz Button (bottom) -->
+        <Button Content="Zatwierdź" Grid.Row="2" 
+                Grid.ColumnSpan="2" HorizontalAlignment="Stretch" 
+                HorizontalContentAlignment="Center"
+                Margin="10" /> 
+        
+        
+    </Grid>
+</Window>
