@@ -65,3 +65,4 @@
 /home/jarek/RiderProjects/egz2306Poczta/egz2306Poczta/obj/Debug/net8.0/egz2306Poczta.csproj.CopyComplete
 /home/jarek/RiderProjects/egz2306Poczta/egz2306Poczta/obj/Debug/net8.0/egz2306Poczta.genruntimeconfig.cache
 /home/jarek/RiderProjects/egz2306Poczta/egz2306Poczta/obj/Debug/net8.0/ref/egz2306Poczta.dll
+/home/jarek/RiderProjects/egz2306Poczta/egz2306Poczta/obj/Debug/net8.0/egz2306Poczta.sourcelink.json

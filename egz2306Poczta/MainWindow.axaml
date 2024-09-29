@@ -11,6 +11,23 @@
         WindowStartupLocation="CenterScreen"
         Padding="30"
         >
+    <!-- Definicja stylów -->
+    <Window.Styles>
+        <!-- zdefiniowanie pseudoklasy header dla TextBlocków -->
+        <Style Selector="TextBlock.header">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Padding" Value="5,0,5,"/>
+            <Setter Property="Margin" Value="0,-25,0,10"/>
+        </Style>
+    </Window.Styles>
+    
+    
+    
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"/>
@@ -25,15 +42,13 @@
         <!-- Rodzaj przesyłki -->
         <StackPanel Margin="0,0,40,0">
             
-            <Border BorderBrush="Gray" 
-                    BorderThickness="1" 
-                    Margin="10" Padding="5">
+            <Border BorderBrush="Gray" BorderThickness="1" 
+                    CornerRadius="10" Margin="10" Padding="5">
                 <StackPanel Margin="10,10,10,10">
-                    <TextBlock Text="Rodzaj przesyłki" FontWeight="Bold" 
-                               Margin="0,0,0,10"/>
-                    <RadioButton Content="Pocztówka" GroupName="ShipmentType"/>
-                    <RadioButton Content="List" GroupName="ShipmentType"/>
-                    <RadioButton Content="Paczka" GroupName="ShipmentType"/>
+                    <TextBlock Text="Rodzaj przesyłki" Classes="header" />
+                    <RadioButton x:Name="PostcardRadioButton" Content="Pocztówka" GroupName="ShipmentType"/>
+                    <RadioButton x:Name="LetterRadioButton" Content="List" GroupName="ShipmentType"/>
+                    <RadioButton x:Name="PackageRadioButton" Content="Paczka" GroupName="ShipmentType"/>
                 
                 </StackPanel>
             </Border>
@@ -44,6 +59,7 @@
                     <Button Content="Sprawdź Cenę" HorizontalAlignment="Stretch"
                             HorizontalContentAlignment="Center" Padding="5"
                             Background="LightBlue"
+                            Click="OnCheckPriceButton"
                             /> 
                 </StackPanel>
                 
@@ -66,9 +82,9 @@
 
        <!-- Dane Adresowe (prawa strona) -->
         <Border Grid.Row="0" Grid.Column="1" BorderBrush="Gray" BorderThickness="1" 
-                Margin="10" Padding="5">
+                Margin="10" Padding="5" CornerRadius="20">
             <StackPanel Margin="10">
-                <TextBlock Text="Dane Adresowe" FontWeight="Bold" Margin="0,0,0,10"/>
+                <TextBlock Text="Dane Adresowe" Classes="header"/>
                 
                 <TextBlock Text="Ulica z numerem"  Margin="0,0,0,10"/>
                 <TextBox Watermark="Konopnickiej 98" Margin="0,0,0,10" />
