@@ -47,9 +47,12 @@
                     CornerRadius="10" Margin="10" Padding="5">
                 <StackPanel Margin="10,10,10,10">
                     <TextBlock Text="Rodzaj przesyłki" Classes="header" />
-                    <RadioButton x:Name="PostcardRadioButton" Content="Pocztówka" GroupName="ShipmentType"/>
-                    <RadioButton x:Name="LetterRadioButton" Content="List" GroupName="ShipmentType"/>
-                    <RadioButton x:Name="PackageRadioButton" Content="Paczka" GroupName="ShipmentType"/>
+                    <RadioButton x:Name="PostcardRadioButton" Tag="Postcard"
+                                 Content="Pocztówka" GroupName="ShipmentType"/>
+                    <RadioButton x:Name="LetterRadioButton" Tag="Letter"
+                                 Content="List" GroupName="ShipmentType" IsChecked="True"/>
+                    <RadioButton x:Name="PackageRadioButton" Tag="Package"
+                                 Content="Paczka" GroupName="ShipmentType"/>
                 
                 </StackPanel>
             </Border>
@@ -65,11 +68,13 @@
                 </StackPanel>
                 
                 <StackPanel Orientation="Horizontal" Margin="5">
-                    <Image Source="Assets/letter.png"
+                    <Image x:Name="ParcelImage"
+                            Source="Assets/letter.png"
                            Width="75" Height="75" HorizontalAlignment="Left" 
                            Margin="0,15,10,10"
                            />
-                    <TextBlock Text="Cena: 1,5 zł" HorizontalAlignment="Right"
+                    <TextBlock x:Name="PriceTextBlock" Text="Cena: 1,5 zł" 
+                               HorizontalAlignment="Right"
                                FontSize="16" FontWeight="Bold"/>
 
                 </StackPanel>
