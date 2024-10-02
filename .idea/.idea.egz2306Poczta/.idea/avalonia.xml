@@ -4,6 +4,7 @@
     <option name="projectPerEditor">
       <map>
         <entry key="egz2306Poczta/MainWindow.axaml" value="egz2306Poczta/egz2306Poczta.csproj" />
+        <entry key="egz2306Poczta/PopUpWindow.axaml" value="egz2306Poczta/egz2306Poczta.csproj" />
       </map>
     </option>
   </component>

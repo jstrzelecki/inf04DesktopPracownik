@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("egz2306Poczta")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc84c6024a0a60eac1e5acdedbe0f32c0048bfd2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a4e3064e1b82b8f5183210353e55fc3a167e924f")]
 [assembly: System.Reflection.AssemblyProductAttribute("egz2306Poczta")]
 [assembly: System.Reflection.AssemblyTitleAttribute("egz2306Poczta")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

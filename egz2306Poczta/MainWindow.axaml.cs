@@ -1,7 +1,5 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Media.Imaging;
@@ -23,6 +21,13 @@ public partial class MainWindow : Window
         ];
     }
 
+    private void ShowMessageBox(string msg)
+    {
+        var win = new PopUpWindow();
+        win.Info.Content = msg;
+        win.ShowDialog(this);
+    }
+    
     private void OnCheckPriceButton(object? sender, RoutedEventArgs e)
     {
         var selectedRadioButton = _radiobuttonsGroup.FirstOrDefault(rb=>rb.IsChecked == true);
@@ -41,5 +46,22 @@ public partial class MainWindow : Window
             ParcelImage.Source = new Bitmap(stream);
         }
         
+    }
+
+    private void SubmitButton(object? sender, RoutedEventArgs e)
+    {
+        
+       // Usunięcie białych znaków z początku i końca tekstu
+           string kodPocztowy = CityCode.Text.Trim();
+
+           string msg = kodPocztowy switch
+           {
+               _ when string.IsNullOrEmpty(kodPocztowy) => "Pole kody pocztowego/nie może być puste.",
+               _ when kodPocztowy.Any(c=> !char.IsDigit(c)) => "Kod pocztowy powinien się składać\nz samych cyfr.",
+               _ when kodPocztowy.Length != 5 => "Nieprawidłowa liczba cyfr\nw kodzie pocztowym.",
+               _ => "Kod pocztowy jest niepoprawny"
+           };
+           
+           ShowMessageBox(msg);
     }
 }
