@@ -52,14 +52,14 @@ public partial class MainWindow : Window
     {
         
        // Usunięcie białych znaków z początku i końca tekstu
-           string kodPocztowy = CityCode.Text.Trim();
+           string? kodPocztowy = CityCode?.Text?.Trim();
 
            string msg = kodPocztowy switch
            {
-               _ when string.IsNullOrEmpty(kodPocztowy) => "Pole kody pocztowego/nie może być puste.",
+               _ when string.IsNullOrEmpty(kodPocztowy) => "Pole kodu pocztowego\nnie może być puste.",
                _ when kodPocztowy.Any(c=> !char.IsDigit(c)) => "Kod pocztowy powinien się składać\nz samych cyfr.",
                _ when kodPocztowy.Length != 5 => "Nieprawidłowa liczba cyfr\nw kodzie pocztowym.",
-               _ => "Kod pocztowy jest niepoprawny"
+               _ => "Kod pocztowy jest poprawny"
            };
            
            ShowMessageBox(msg);

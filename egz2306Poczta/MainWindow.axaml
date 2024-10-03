@@ -97,8 +97,8 @@
                 <TextBlock Text="Ulica z numerem"  Margin="0,0,0,10"/>
                 <TextBox Watermark="Konopnickiej 98" Margin="0,0,0,10" />
                 
-                <TextBlock x:Name="CityCode" Text="Kod pocztowy" Margin="0,0,0,10" />
-                <TextBox Watermark="65124" Width="100" HorizontalAlignment="Left" 
+                <TextBlock  Text="Kod pocztowy" Margin="0,0,0,10" />
+                <TextBox x:Name="CityCode"  Watermark="65124" Width="100" HorizontalAlignment="Left" 
                          Margin="0,0,0,10" />
                 
                 <TextBlock Text="Miasto" Margin="0,0,0,10" />

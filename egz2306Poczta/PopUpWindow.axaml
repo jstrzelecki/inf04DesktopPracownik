@@ -10,9 +10,10 @@
         CanResize="False"
         WindowStartupLocation="CenterOwner"
         >
-        <StackPanel>
-                <Label x:Name="Info" Margin="10" Padding="10" FontSize="15"/>
-                <Button Content="ok" HorizontalAlignment="Right" VerticalAlignment="Bottom" 
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label x:Name="Info" Margin="10" Padding="10" FontSize="15" HorizontalAlignment="Center"/>
+                <Button Content="OK" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="100"
+                        Background="Lime" HorizontalContentAlignment="Center" FontWeight="Bold"
                         Margin="5,5,5,15" Padding="10" Click="Button_OnClick"/>
         </StackPanel>
 </Window>
